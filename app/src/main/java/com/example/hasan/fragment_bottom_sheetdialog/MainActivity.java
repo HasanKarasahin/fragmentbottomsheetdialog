@@ -4,9 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements MyBottomSheetDialog.BottomSheetListener {
+public class MainActivity extends AppCompatActivity {
 
     TextView tvResult;
 
@@ -21,10 +20,11 @@ public class MainActivity extends AppCompatActivity implements MyBottomSheetDial
     public void btClick(View view) {
         MyBottomSheetDialog dialog = new MyBottomSheetDialog();
         dialog.show(getSupportFragmentManager(), "dailog");
-    }
-
-    @Override
-    public void onButtonClicked(String text) {
-        tvResult.setText(text);
+        dialog.callBack(new MyBottomSheetDialog.BottomSheetListener() {
+            @Override
+            public void onButtonClicked(String text) {
+                tvResult.setText(text);
+            }
+        });
     }
 }
