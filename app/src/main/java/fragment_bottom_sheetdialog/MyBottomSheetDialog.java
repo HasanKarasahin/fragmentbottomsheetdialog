@@ -1,4 +1,4 @@
-package com.example.hasan.fragment_bottom_sheetdialog;
+package fragment_bottom_sheetdialog;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.hasan.fragment_bottom_sheetdialog.R;
 
 public class MyBottomSheetDialog extends BottomSheetDialogFragment {
 
